@@ -23,4 +23,5 @@ Model training process:
 4. Use trained model to predict test set and output the result as "submissing_final.csv".
 
 Result: 
+
 Test accuracy for each part of dataset (images, texts, features) is from 87% to 91%, after train a neural network to ensemble all the informatiion the final test accuracy is boosted to 95%! 
