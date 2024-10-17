@@ -1,7 +1,7 @@
-Dataset Description
+#Dataset Description
 The data consists of e-commerce products. Each product has a unique id and a category. Your job is to predict the category of each product based on categorical features, a noisy text description and a noisy image.
 
-Data fields
+#Data fields
 id: a unique id for each product
 category: a string describing the category of each product
 gender: a string describing the target gender for this product
@@ -12,10 +12,11 @@ noisyTextDescription: a string of words corresponding to a noisy display name of
 Images
 For each product, there is a noisy image of the product in the directory "noisy-images". The filename of each image is the product id. The images are 60x80x3 jpeg images in RGB format (i.e., each pixel intensity is an integer in {0,1,2,…,255}).
 
-code explanation:
+#code explanation:
 preprocess dataset including one-hot encoding for labels, data augmentation, 
 1. Use CNN to classify images
 2. Append text features "gender" "basecolor","season","usage" together with "noisy text" into one text feature
    Then, use LSTM to classify combined text feature based on sentence to tensor function (break down into letters, digits and punctuation)
 3. Use simple neural network to concatenate results from RNN and CNN, and output into sigle probability as final result
-4. 
+
+$Result: the final test accuracy is 95% 
