@@ -15,7 +15,7 @@ Images: For each product, there is a noisy image of the product in the directory
 
 Model training process:
 
-preprocess dataset including one-hot encoding for labels, data augmentation, etc.
+0. Preprocess dataset including one-hot encoding for labels, data augmentation, etc.
 1. Use CNN to classify images
 2. Append text features "gender" "basecolor","season","usage" together with "noisy text" into one text feature
    Then, use LSTM to classify combined text feature based on sentence to tensor function (break down into letters, digits and punctuation)
